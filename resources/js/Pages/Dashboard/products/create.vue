@@ -3,7 +3,7 @@
 
         <div class="mt-8">
             <div class="flex">
-                <h2 class="text-3xl text-indigo-500 font-bold">Meals /<span class="text-gray-700"> Create</span></h2>
+                <h2 class="text-3xl text-indigo-500 font-bold">Product /<span class="text-gray-700"> Create</span></h2>
             </div>
 
             <base-panel class="md:max-w-3xl mt-4">
@@ -31,7 +31,7 @@
                         
                     </div>
                     <div class="flex justify-end mt-4">
-                        <base-button primary>Create meal</base-button>
+                        <base-button primary>Create product</base-button>
                     </div>
                 </form>
             </base-panel>
@@ -59,7 +59,7 @@
         },
         methods: {
             submit() {
-                this.$inertia.post('/dashboard/meals', this.form);
+                this.$inertia.post('/dashboard/products', this.form);
             }
         }
     }

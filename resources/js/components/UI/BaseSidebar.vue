@@ -63,7 +63,7 @@
                 </li>
 
                 <li class="px-2 py-3 hover:bg-gray-900 rounded mt-2">
-                    <inertia-link href="/dashboard/meals" class="flex items-center">
+                    <inertia-link href="/dashboard/products" class="flex items-center">
                         <svg class="w-6 text-gray-500 fill-current" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><title>ionicons-v5-l</title>
                             <path d='M322,416c0,35.35-20.65,64-56,64H134c-35.35,0-56-28.65-56-64' style='fill:none;stroke:#a2adc0;stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px'/>
                             <path d='M336,336c17.67,0,32,17.91,32,40h0c0,22.09-14.33,40-32,40H64c-17.67,0-32-17.91-32-40h0c0-22.09,14.33-40,32-40' style='fill:none;stroke:#a2adc0;stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px'/>
@@ -73,7 +73,7 @@
                             <polyline points='368 112 384 48 431 32' style='fill:none;stroke:#a2adc0;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px'/>
                             <line x1='224' y1='112' x2='480' y2='112' style='fill:none;stroke:#a2adc0;stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px'/>
                         </svg>
-                        <span class="mx-2 text-gray-300">Meals</span>
+                        <span class="mx-2 text-gray-300">Products</span>
                     </inertia-link>
                 </li>
 

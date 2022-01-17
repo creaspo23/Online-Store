@@ -2,19 +2,20 @@
 
 namespace App\Http\Controllers;
 
-use App\Meal;
+use App\Product;
+
 use App\Category;
 use Illuminate\Http\Request;
 
-class MealController extends Controller
+class ProductController extends Controller
 {
 
     public function index()
     {
-        $meals = Meal::all();
+        $products = Product::all();
 
-        return inertia()->render('Dashboard/meals/index',[
-            'meals' => $meals
+        return inertia()->render('Dashboard/products/index',[
+            'products' => $products
         ]);
 
     }
@@ -23,7 +24,7 @@ class MealController extends Controller
     public function create()
     {
         $categories = Category::all();
-        return inertia()->render('Dashboard/meals/create', [
+        return inertia()->render('Dashboard/products/create', [
             'categories' => $categories
         ]);
     }
@@ -38,7 +39,7 @@ class MealController extends Controller
             'category_id' => 'required',
         ]);
 
-        Meal::create([
+        Product::create([
             'name' => $request->name,
             'price' => $request->price,
             // 'image' => $request->image,
@@ -47,22 +48,22 @@ class MealController extends Controller
 
         session()->flash('toast', [
             'type' => 'success',
-            'message' => 'Meal created successfully'
+            'message' => 'product created successfully'
         ]);
 
-        return redirect()->route('meals.index');
+        return redirect()->route('products.index');
     }
 
-    public function edit(Meal $meal)
+    public function edit(Product $product)
     {
         $categories = Category::all();
         return inertia()->render('Dashboard/meals/edit', [
-            'meal' => $meal,
+            'product' => $product,
             'categories' => $categories
         ]);
     }
 
-    public function update(Request $request, Meal $meal)
+    public function update(Request $request, Product $product)
     {
         $data = $request->validate([
             'name' => 'required',
@@ -71,7 +72,7 @@ class MealController extends Controller
             'category_id' => 'required',
         ]);
 
-        $meal->update($data);
+        $product->update($data);
 
         session()->flash('toast', [
             'type' => 'success',
@@ -82,9 +83,9 @@ class MealController extends Controller
 
     }
 
-    public function destroy(Meal $meal)
+    public function destroy(Product $product)
     {
-        $meal->delete();
+        $product->delete();
 
         session()->flash('toast', [
             'type' => 'error',

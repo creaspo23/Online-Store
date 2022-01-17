@@ -33,12 +33,12 @@ Route::middleware('auth')->prefix('/dashboard')->group(function () {
     
     Route::get('/orders', 'OrderController@index')->name('orders.index');
 
-    Route::get('/meals', 'MealController@index')->name('meals.index');
-    Route::get('/meals/create', 'MealController@create')->name('meals.create');
-    Route::post('/meals', 'MealController@store')->name('meals.store');
-    Route::get('/meals/{meal}/edit', 'MealController@edit')->name('meal.edit');
-    Route::put('/meals/{meal}', 'MealController@update')->name('meals.update');
-    Route::delete('/meals/{meal}', 'MealController@destroy')->name('meals.destroy');
+    Route::get('/products', 'ProductController@index')->name('products.index');
+    Route::get('/products/create', 'ProductController@create')->name('products.create');
+    Route::post('/products', 'ProductController@store')->name('products.store');
+    Route::get('/products/{product}/edit', 'ProductController@edit')->name('products.edit');
+    Route::put('/products/{product}', 'ProductController@update')->name('products.update');
+    Route::delete('/products/{product}', 'ProductController@destroy')->name('products.destroy');
 
     Route::get('/categories', 'CategoryController@index')->name('categories.index');
     Route::post('/categories', 'CategoryController@store')->name('categories.store');

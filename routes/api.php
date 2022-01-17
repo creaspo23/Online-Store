@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 Route::get('products' , 'API\ProductController@index');
+Route::get('products/{product}' , 'API\ProductController@show');
 
 Route::get('categories' , 'API\CategoryController@index');
 

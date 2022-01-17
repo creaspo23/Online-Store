@@ -3,7 +3,7 @@
 
         <div class="mt-8">
             <div class="flex">
-                <h2 class="text-3xl text-indigo-500 font-bold">Meals /<span class="text-gray-700"> Edit</span></h2>
+                <h2 class="text-3xl text-indigo-500 font-bold">Product /<span class="text-gray-700"> Edit</span></h2>
             </div>
 
             <base-panel class="md:max-w-3xl mt-4">
@@ -25,7 +25,7 @@
                        
                     </div>
                     <div class="flex justify-end mt-4">
-                        <base-button primary>Update Meal</base-button>
+                        <base-button primary>Update Product</base-button>
                     </div>
                 </form>
             </base-panel>
